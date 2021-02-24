@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  src: url(../fonts/opensans.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  src: url(../fonts/opensanssemibold.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  src: url(../fonts/opensansbold.ttf);
+}
+
+html, body {
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+* {
+  outline: none!important;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 lg:px-6 py-2 lg:py-3.5 text-sm font-bold whitespace-nowrap rounded-md border border-yellow hover:bg-yellow transition-colors duration-200;
+  }
+
+  .btn-main {
+    @apply text-base shadow-btn font-bold whitespace-nowrap rounded-md hover:bg-yellow-dirty transition-colors duration-200;
+  }
+
+  .main-img {
+    right: 0;
+    @apply absolute bottom-0 right-0 transform translate-x-6/10 translate-y-9 max-h-96;
+
+    @screen lg {
+      @apply w-auto absolute max-w-none translate-x-0 translate-y-0;
+      max-height: none;
+      right: -160px;
+      top: 46px;
+    }
+    @screen xl {
+      @apply w-auto absolute max-w-none;
+      max-height: none;
+    }
+  }
+
+  .decoration-square {
+    @apply transform rotate-45 w-7 h-7 border-5 border-yellow opacity-40 absolute;
+    left: -85px;
+    top: 64px;
+  }
+
+  .decoration-cross {
+    @apply w-7 h-7 absolute opacity-40;
+    left: -183px;
+    top: 520px;
+  }
+}
+
+@keyframes price {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2000ms;
+}
