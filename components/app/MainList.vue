@@ -6,6 +6,7 @@
       class="text-white text-sm font-semibold"
       v-for="(item, index) in items" :key="item"
       ) {{ item }}
+
 </template>
 
 <script>
